@@ -25,13 +25,15 @@
       alt: "Microsoft Icon",
     },
   ];
+  export let data;
+
 </script>
 
 <div class="flex flex-col items-center mt-48 font-Inter">
   <div
     class="w-11/12 p-12 bg-white sm:w-8/12 md:w-1/2 lg:w-3/12 border rounded-md"
   >
-    <form>
+    <form method="POST">
       <label for="email" class="block text-xs font-semibold mt-4">E-MAIL</label>
       <input
         id="email"

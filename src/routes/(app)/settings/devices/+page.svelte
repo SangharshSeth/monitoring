@@ -5,5 +5,5 @@
 </script>
 
 <div>
-    <h2 class="text-4xl text-emerald-600">Profile<h2/>
+    <button on:click={addDevices} class="btn btn-lg">+</button>
 </div>
