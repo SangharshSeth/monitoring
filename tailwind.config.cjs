@@ -10,7 +10,7 @@ const config = {
     },
   },
   daisyui: {
-    themes: ["sunset", "dracula", "pastel", "nord", "cupcake"],
+    themes: ["sunset", "night", "dracula", "pastel", "nord", "cupcake"],
   },
 
   plugins: [require("daisyui")],

@@ -4,7 +4,7 @@
 
 <div class="navbar bg-base-100 rounded-md font-Inter border">
   <div class="flex-1">
-    <a href="/" class="btn btn-ghost font-bold text-4xl">{data.name}</a>
+    <a href="/" class="btn font-bold text-4xl">{data.name}</a>
   </div>
   <div class="flex-none">
     <ul class="menu menu-horizontal px-1">
