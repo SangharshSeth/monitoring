@@ -1,22 +1,20 @@
 <script lang="ts">
   import {
-    IconBrowser,
+    IconCreditCard,
+    IconCreditCardFilled,
     IconDeviceDesktop,
     IconLockAccess,
     IconSettings,
-    IconUser,
-    IconWifi,
-    IconPremiumRights,
-    IconUserFilled,
-    IconCreditCardFilled,
-    IconCreditCard,
     IconSettingsFilled,
+    IconUser,
+    IconUserFilled,
+    IconWifi,
   } from "@tabler/icons-svelte";
-  import { writable } from 'svelte/store';
+  import { writable } from "svelte/store";
   import type { LayoutData } from "./$types";
-  
+
   export let data: LayoutData;
-  
+
   const icons = [
     {
       icon: IconUser,
@@ -75,19 +73,21 @@
     <slot />
   </div>
   <div class="drawer-side border font-Inter font-medium">
-    <ul class="menu  w-64 min-h-full bg-base-200 text-base-content">
+    <ul class="menu w-64 min-h-full bg-base-200 text-base-content">
       {#each icons as { icon, href, name, filledIcon }, index}
-        <div
+        <button
           on:click={() => handleItemClick(index)}
-          class={index === $selectedIconIndex ? "flex gap-1 font-bold text-xl rounded items-center pt-2" : "flex gap-1 items-center pt-2"}
+          class={index === $selectedIconIndex
+            ? "flex gap-1 font-bold text-xl rounded items-center pt-2"
+            : "flex gap-1 items-center pt-2"}
         >
-        {#if index === $selectedIconIndex}
-        <svelte:component this={filledIcon} size={32} stroke={2} />
-      {:else}
-        <svelte:component this={icon} size={32} stroke={2} />
-      {/if}
+          {#if index === $selectedIconIndex}
+            <svelte:component this={filledIcon} size={32} stroke={2} />
+          {:else}
+            <svelte:component this={icon} size={32} stroke={2} />
+          {/if}
           <li class="flex gap"><a {href}>{name}</a></li>
-        </div>
+          </button>
       {/each}
     </ul>
   </div>
