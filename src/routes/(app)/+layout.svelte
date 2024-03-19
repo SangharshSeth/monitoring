@@ -10,7 +10,7 @@
     <ul class="menu menu-horizontal px-1">
       <li><a href="/">{data.pricing}</a></li>
       <li><a href="/about">About</a></li>
-      <li><a href="/settings">Settings</a></li>
+      <li><a href="/app">app</a></li>
     </ul>
   </div>
 </div>

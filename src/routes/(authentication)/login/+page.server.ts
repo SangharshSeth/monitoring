@@ -6,10 +6,10 @@ export const actions = {
 		const email = data.get('email');
 		const password = data.get('password');
 
-        console.log(email, password)
+		console.log(email, password)
 
 		cookies.set('sessionid', "email", { path: '/' });
 
-		throw redirect(302, "/settings")
+		throw redirect(302, "/app")
 	},
 } satisfies Actions;

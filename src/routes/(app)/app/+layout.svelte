@@ -4,11 +4,14 @@
     IconCreditCardFilled,
     IconDeviceDesktop,
     IconLockAccess,
-    IconSettings,
+    IconSettings2,
     IconSettingsFilled,
+    IconSettings,
     IconUser,
     IconUserFilled,
+    IconVideo,
     IconWifi,
+    IconFriends,
   } from "@tabler/icons-svelte";
   import { writable } from "svelte/store";
   import type { LayoutData } from "./$types";
@@ -20,42 +23,49 @@
       icon: IconUser,
       filledIcon: IconUserFilled,
       name: "Profile",
-      href: "/settings/profile",
+      href: "/app/profile",
       isSelected: true,
     },
     {
       icon: IconCreditCard,
       filledIcon: IconCreditCardFilled,
       name: "Membership",
-      href: "/settings/memberships",
+      href: "/app/memberships",
       isSelected: false,
     },
     {
-      icon: IconWifi,
+      icon: IconVideo,
       filledIcon: IconWifi,
-      name: "Network",
-      href: "/settings/network",
+      name: "eSports",
+      href: "/app/esports",
       isSelected: false,
     },
     {
       icon: IconLockAccess,
       filledIcon: IconLockAccess,
       name: "Security",
-      href: "/settings/security",
+      href: "/app/security",
       isSelected: false,
     },
     {
       icon: IconDeviceDesktop,
       filledIcon: IconDeviceDesktop,
       name: "Devices",
-      href: "/settings/devices",
+      href: "/app/devices",
+      isSelected: false,
+    },
+    {
+      icon: IconFriends,
+      filledIcon: IconFriends,
+      name: "Find Players",
+      href: "/app/find-players",
       isSelected: false,
     },
     {
       icon: IconSettings,
       filledIcon: IconSettingsFilled,
       name: "Settings",
-      href: "/settings",
+      href: "/app/settings",
       isSelected: false,
     },
   ];
@@ -87,7 +97,7 @@
             <svelte:component this={icon} size={32} stroke={2} />
           {/if}
           <li class="flex gap"><a {href}>{name}</a></li>
-          </button>
+        </button>
       {/each}
     </ul>
   </div>

@@ -1,7 +1,5 @@
 <script lang="ts">
     import type { PageData } from "./$types";
-
 </script>
 
-<h1>Settings</h1>
-
+<h1>app</h1>

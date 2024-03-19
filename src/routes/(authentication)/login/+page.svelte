@@ -6,7 +6,7 @@
   const oauths = [
     {
       image: github,
-      href: "/settings",
+      href: "/app",
       alt: "Github Icon",
     },
     {
@@ -26,7 +26,6 @@
     },
   ];
   export let data;
-
 </script>
 
 <div class="flex flex-col items-center mt-48 font-Inter">
